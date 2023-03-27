@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-:root{
+:root {
   --nav-height: 100px;
 }
 
@@ -8,20 +8,20 @@
   font-family: 'Poppins';
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
 }
 
-.section-height{
+.section-height {
   height: calc(100vh - var(--nav-height));
 }
 
-.nav-height{
-  height:var(--nav-height);
+.nav-height {
+  height: var(--nav-height);
 }
 
 
-.active::after{
+.active::after {
   content: "";
   height: 6px;
   width: 6px;
