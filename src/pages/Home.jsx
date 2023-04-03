@@ -11,15 +11,15 @@ const Home = () => {
 			{/* <div className='absolute top-20 left-[100px] bg-white h-[400px] w-[400px] bg-opacity-10 rounded-full'></div>
 			<div className='absolute top-20 left-[300px] bg-white h-[400px] w-[400px] bg-opacity-10 rounded-full'></div> */}
 			<section className='section-height w-screen flex bg-black Poppins'>
-				<div className='w-[50%] h-full flex flex-col px-24 pt-36 pb-16'>
+				<div className='w-[50%] h-full flex flex-col px-24 pt-16 pb-16'>
 					<h1 className='text-white text-6xl font-medium leading-[70px]'>Find Your Job With Hovin!</h1>
 					<p className='text-gray-400 text-sm w-[70%] py-8 leading-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur tempora ea aperiam, non esse quaerat reiciendis molestias ad cupiditate qui?</p>
 					<div className='flex flex-col justify-between h-full'>
 						<div className='w-[60%] flex justify-between'>
-							<button className='px-7 py-3 text-sm rounded-2xl bg-white text-black duration-300 outline-none'>Download</button>
-							<button className='px-7 py-3 text-sm rounded-2xl text-white duration-300 outline-none'>Learn More</button>
+							<button className='px-7 py-3 text-sm rounded-2xl bg-white hover:bg-gray-200 text-black duration-300 outline-none'>Download</button>
+							<button className='px-7 py-3 text-sm rounded-2xl border-2 border-white text-white outline-none'>Learn More</button>
 						</div>
-						<div className='flex w-full justify-between pt-24'>
+						<div className='flex w-full justify-between pt-20'>
 							<div>
 								<h1 className='text-gray-400 text-sm'>Users</h1>
 								<p className='text-white text-xl'>100k+ Users</p>
@@ -39,8 +39,42 @@ const Home = () => {
 
 				</div>
 			</section>
+
+			<section className='h-screen w-screen flex items-center Poppins px-24 py-7'>
+				<div className='w-1/2 p-14'>
+					<img className='rounded-lg' src="https://cdn.dribbble.com/users/1664006/screenshots/12254345/media/f399ca20285f749985b5ebd896ca097f.png?compress=1&resize=1000x750&vertical=top" alt="" />
+				</div>
+				<div className='w-1/2 p-14'>
+					<p className='text-xl font-extralight text-gray-400'>Search Result</p>
+					<h1 className='mt-3 capitalize leading-snug text-4xl font-bold text-black'>Search And Apply The Job You Want.</h1>
+					<p className='mt-3 text-gray-400'>Find the job according to your skills. We will make it easy to make your dream true. Come find a job in Hovin.</p>
+					<div className='flex w-[70%] justify-between pt-14'>
+						<div>
+							<h1 className='text-gray-400 text-sm'>Users</h1>
+							<p className='text-xl font-semibold'>100k+ Users</p>
+						</div>
+						<div>
+							<h1 className='text-gray-400 text-sm'>Job Vacancy</h1>
+							<p className='text-xl font-semibold'>15K+ Jobs</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className='h-screen w-screen flex items-center Poppins px-24 py-7'>
+				<div className='w-1/2 p-14'>
+					<p className='text-xl font-extralight text-gray-400'>Profile Analytic</p>
+					<h1 className='mt-3 capitalize leading-snug text-4xl font-bold text-black'>See the progress of your account.</h1>
+					<p className='mt-3 pb-9 text-gray-400'>Build your profile for employers to glance at. And strengthen you profile to build a strong personality in finding the job you want.</p>
+					<button className='px-7 py-3 text-sm rounded-2xl bg-black text-white outline-none'>Download</button>
+				</div>
+				<div className='w-1/2 p-14'>
+					<img className='rounded-lg' src="https://cdn.dribbble.com/users/1664006/screenshots/12254345/media/f399ca20285f749985b5ebd896ca097f.png?compress=1&resize=1000x750&vertical=top" alt="" />
+				</div>
+			</section>
+
 			{/* Easy to use */}
-			<section className='h-screen w-screen flex flex-col items-center bg-white Poppins px-24 py-16'>
+			<section className='h-screen w-screen flex flex-col items-center bg-white Poppins px-24 py-7'>
 				<h3 className='text-xl font-extralight text-gray-400'>How It Works?</h3>
 				<h1 className='mt-3 capitalize text-4xl font-bold text-black'>Easy to use, easy to apply</h1>
 				<div className='mt-16 w-full h-full grid grid-cols-3 gap-x-10'>
@@ -56,6 +90,16 @@ const Home = () => {
 							</div>
 						</div>
 					})}
+				</div>
+			</section>
+
+			<section className='h-screen w-screen flex items-center Poppins px-24 py-7'>
+				<div className='flex justify-between'>
+					<h1 className='mt-3 w-2/5 capitalize leading-snug text-4xl font-bold text-black'>Check out user reviews about our platform!</h1>
+					<p className='mt-3 pb-9 w-2/4 text-gray-400'>Hovin is one of the largest online platforms to find the job you want. This platform makes it for you to search according to the field you have.</p>
+				</div>
+				<div className='bg-green-200 '>
+
 				</div>
 			</section>
 
