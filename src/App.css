@@ -32,8 +32,22 @@
   transform: translateX(-50%);
 }
 
-.signin-bg{
+.custom-bg{
   background: url('https://wallup.net/wp-content/uploads/2018/09/25/631481-dark-bench-sunlight-nature-748x490.jpg');
   background-repeat: no-repeat;
-  
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  background-position: center;
+}
+
+.custom-bg::after{
+  content: "";
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #000 50%,#00000096 100%);
 }
