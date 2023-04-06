@@ -7,9 +7,6 @@ const Home = () => {
 	return (
 		<>
 			<Navbar />
-			{/* Home */}
-			{/* <div className='absolute top-20 left-[100px] bg-white h-[400px] w-[400px] bg-opacity-10 rounded-full'></div>
-			<div className='absolute top-20 left-[300px] bg-white h-[400px] w-[400px] bg-opacity-10 rounded-full'></div> */}
 			<section className='section-height w-screen flex bg-black Poppins'>
 				<div className='w-[50%] h-full flex flex-col px-24 pt-16 pb-16'>
 					<h1 className='text-white text-6xl font-medium leading-[70px]'>Find Your Job With Hovin!</h1>
