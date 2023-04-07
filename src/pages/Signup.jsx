@@ -1,7 +1,32 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+    const initialState = {
+        firstName :"",
+        lastName : "",
+        email : "",
+        password : ""
+    }
+    const [formstate, setformstate] = useState(initialState);
+
+    const onchangeTypes = (e) => {
+        setformstate({
+            ...formstate,
+            [e.target.id]: e.target.value
+        })
+    }
+    const signupUser = () => {
+        axios("http://localhost:5000/user/signup", {
+            method: "POST",
+            data: formstate
+        }).then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
     return (
         <>
             <section className='h-[100vh] w-[100vw] flex custom-bg Poppins'>
@@ -15,22 +40,22 @@ const SignUp = () => {
                             <div className='flex justify-between w-full py-3'>
                                 <div className='w-[47%] flex flex-col'>
                                     <label className=' text-white mb-1' htmlFor="">First name:</label>
-                                    <input className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="text" placeholder='Enter your first name.' />
+                                    <input id="firstName" onChange={onchangeTypes} className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="text" placeholder='Enter your first name.' />
                                 </div>
                                 <div className='w-[47%] flex flex-col'>
                                     <label className=' text-white mb-1' htmlFor="">Last name:</label>
-                                    <input className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="text" placeholder='Enter your last name.' />
+                                    <input id="lastname" onChange={onchangeTypes} className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="text" placeholder='Enter your last name.' />
                                 </div>
                             </div>
                             <div className='py-2 flex flex-col'>
-                            <label className=' text-white mb-1' htmlFor="">Email:</label>
-                                <input className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800 ' type="email" placeholder='Enter your email.' />
+                                <label className=' text-white mb-1' htmlFor="">Email:</label>
+                                <input id="email" onChange={onchangeTypes} className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800 ' type="email" placeholder='Enter your email.' />
                             </div>
                             <div className='py-2 flex flex-col'>
-                            <label className=' text-white mb-1' htmlFor="">Password:</label>
-                                <input className='w-full text-white px-4 py-3 rounded-md outline-none bg-gray-800 mb-10' type="password" placeholder='Enter your password.' />
+                                <label className=' text-white mb-1' htmlFor="">Password:</label>
+                                <input id="password" onChange={onchangeTypes} className='w-full text-white px-4 py-3 rounded-md outline-none bg-gray-800 mb-10' type="password" placeholder='Enter your password.' />
                             </div>
-                            <button className='mx-auto px-10 py-3 outline-none rounded-md bg-gray-800 text-white  font-semibold hover:bg-gray-900 duration-300'>Create Account</button>
+                            <button className='mx-auto px-10 py-3 outline-none rounded-md bg-gray-800 text-white  font-semibold hover:bg-gray-900 duration-300' onClick={signupUser}>Create Account</button>
                         </div>
                     </div>
                 </div>

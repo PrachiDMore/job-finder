@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({theme}) => {
   return (
     <>
         <nav className='px-10 w-screen nav-height flex bg-black Poppins'>

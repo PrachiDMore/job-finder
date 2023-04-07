@@ -1,7 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signin = () => {
+    const initialState = {
+        email: "",
+        password: ""
+    }
+    const [formstate, setformstate] = useState(initialState);
+    const navigate=useNavigate()
+
+    const onchangeTypes = (e) => {
+        setformstate({
+            ...formstate,
+            [e.target.id]: e.target.value
+        })
+    }
+
+    const signinUser = () => {
+        axios("http://localhost:5000/user/signin", {
+            method: "POST",
+            data: formstate
+        }).then((res) => {
+            console.log(res);
+            navigate("/")
+        }).catch((err) => {
+            console.log(err);
+        })
+
+    }
     return (
         <>
             <section className='h-[100vh] w-[100vw] flex custom-bg Poppins'>
@@ -14,14 +41,14 @@ const Signin = () => {
                         <div className='w-full flex flex-col'>
                             <div className='py-2 flex flex-col'>
                                 <label className=' text-white mb-1' htmlFor="">Email:</label>
-                                <input className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800 ' type="email" placeholder='Enter your email.' />
+                                <input id="email" onChange={onchangeTypes} className='w-full  text-white px-4 py-3 rounded-md outline-none bg-gray-800 ' type="email" placeholder='Enter your email.' />
                             </div>
                             <div className='py-2 flex flex-col'>
                                 <label className=' text-white mb-1' htmlFor="">Password:</label>
-                                <input className='w-full text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="password" placeholder='Enter your password.' />
+                                <input id="password" onChange={onchangeTypes} className='w-full text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="password" placeholder='Enter your password.' />
                             </div>
                             <div className='text-right mt-3 mb-6 text-blue-600'>forget password?</div>
-                            <button className='mx-auto px-10 py-3 outline-none rounded-md bg-gray-800 text-white  font-semibold hover:bg-gray-900 duration-300'>Login</button>
+                            <button className='mx-auto px-10 py-3 outline-none rounded-md bg-gray-800 text-white  font-semibold hover:bg-gray-900 duration-300' onClick={signinUser} >Login</button>
                         </div>
                     </div>
                 </div>
