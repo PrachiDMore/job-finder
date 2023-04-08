@@ -30,7 +30,7 @@ const SignUp = () => {
     return (
         <>
             <section className='h-[100vh] w-[100vw] flex custom-bg Poppins'>
-                <div className='w-1/2 flex flex-col justify-between h-[95vh] px-16 py-10 relative z-10'>
+                <div className='w-1/2 flex flex-col justify-between h-[98vh] px-16 py-10 relative z-10'>
                     <Link to="/" className='text-white text-3xl font-bold'>Hovin</Link>
                     <div>
                         <p className='text-gray-400 uppercase'>Start for free</p>

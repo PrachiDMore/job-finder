@@ -47,7 +47,7 @@ const Signin = () => {
                                 <label className=' text-white mb-1' htmlFor="">Password:</label>
                                 <input id="password" onChange={onchangeTypes} className='w-full text-white px-4 py-3 rounded-md outline-none bg-gray-800' type="password" placeholder='Enter your password.' />
                             </div>
-                            <div className='text-right mt-3 mb-6 text-blue-600'>forget password?</div>
+                            <div className='text-right mt-3 mb-6 text-blue-600 hover:cursor-pointer'>forget password?</div>
                             <button className='mx-auto px-10 py-3 outline-none rounded-md bg-gray-800 text-white  font-semibold hover:bg-gray-900 duration-300' onClick={signinUser} >Login</button>
                         </div>
                     </div>
