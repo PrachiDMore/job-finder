@@ -8,7 +8,7 @@ const Home = () => {
 		<>
 			<Navbar />
 			<section className='section-height w-screen flex bg-black Poppins'>
-				<div className='w-[50%] h-full flex flex-col px-24 pt-16 pb-16'>
+				<div className='w-[50%] h-full flex flex-col px-24 py-16'>
 					<h1 className='text-white text-6xl font-medium leading-[70px]'>Find Your Job With Hovin!</h1>
 					<p className='text-gray-400 text-sm w-[70%] py-8 leading-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur tempora ea aperiam, non esse quaerat reiciendis molestias ad cupiditate qui?</p>
 					<div className='flex flex-col justify-between h-full'>
