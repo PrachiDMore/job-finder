@@ -6,6 +6,7 @@ import SignUp from './pages/Signup';
 import UpdateProfile from './pages/UpdateProfile';
 import { Jobs } from './pages/Jobs';
 import Jobform from './pages/Jobform';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/update" element={<UpdateProfile />} />
-          <Route path="/jobs" element={<Jobs />} />
-          <Route path="/jobform" element={<Jobform />} />
+          <Route path="/find" element={<Jobs />} />
+          <Route path="/create-job" element={<Jobform />} />
         </Routes>
       </Router>
     </>

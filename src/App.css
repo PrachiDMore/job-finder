@@ -15,6 +15,9 @@
 .section-height {
   height: calc(100vh - var(--nav-height));
 }
+.min-section-height {
+  min-height: calc(100vh - var(--nav-height));
+}
 
 .nav-height {
   height: var(--nav-height);
@@ -50,4 +53,11 @@
   top: 0;
   left: 0;
   background: linear-gradient(90deg, #000 40%,#0000004d 100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

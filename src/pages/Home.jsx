@@ -1,9 +1,28 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import easy_to_use from '../data/easy_to_use'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 	//  Template Code
+	const routes = [
+		{
+			link: "/",
+			label: "Home"
+		},
+		{
+			link: "/about",
+			label: "About"
+		},
+		{
+			link: "/find",
+			label: "Jobs"
+		},
+		{
+			link: "/create-job",
+			label: "Post A Job"
+		},
+	]
 	return (
 		<>
 			<Navbar />
@@ -122,10 +141,11 @@ const Home = () => {
 					</div>
 					<div className='pt-10 w-2/4 text-white grid grid-cols-3'>
 						<div className='flex flex-col gap-3'>
-							<span className='text-gray-200'>Home</span>
-							<span className='text-gray-200'>About</span>
-							<span className='text-gray-200'>How It Works</span>
-							<span className='text-gray-200'>Find Jobs</span>
+							{
+								routes.map((route) => {
+									return <Link to={route.link} className='text-gray-200'>{route.label}</Link>
+								})
+							}
 						</div>
 						<div className='flex flex-col gap-3'>
 							<span className='text-gray-200'>Facebook</span>
